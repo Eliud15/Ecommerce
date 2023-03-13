@@ -8,7 +8,7 @@ export const CafeEspeciales = () => {
   const navegador = useNavigate();
     const [cafeEspeciales, setCafeEspeciales] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:3000/cafeespecial")
+      fetch("https://cafeapi.onrender.com/cafeespecial")
       .then((response) => response.json())
       .then((data) => setCafeEspeciales(data));
     }, []);

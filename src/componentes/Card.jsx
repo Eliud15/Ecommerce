@@ -9,11 +9,11 @@ export const Card = () => {
   const [cafes, setCafes] = useState([]);
   const [capuchino, setCapuchino] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/cafe")
+    fetch("https://cafeapi.onrender.com/cafe")
       .then((response) => response.json())
       .then((data) => setCafes(data));
 
-    fetch("http://localhost:3000/capuchino")
+    fetch("https://cafeapi.onrender.com/capuchino")
       .then((response) => response.json())
       .then((data) => setCapuchino(data));
   }, []);
