@@ -8,7 +8,7 @@ export const CafeConLeche = () => {
   const navegador = useNavigate();
     const [cafeConLeche, setCafeConLeche] = useState([]);
     useEffect(() => {
-      fetch("https://cafeapi.onrender.com/cafeconleche", { mode: 'no-cors'})
+      fetch("https://cafeapi.onrender.com/cafeconleche")
       .then((response) => response.json())
       .then((data) => setCafeConLeche(data));
     }, []);

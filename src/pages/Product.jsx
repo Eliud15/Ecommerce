@@ -30,7 +30,7 @@ export const Product = () => {
     navegador('/producto')
   }
   useEffect(() => {
-    fetch("https://cafeapi.onrender.com/cafeespecial", { mode: 'no-cors'})
+    fetch("https://cafeapi.onrender.com/cafeespecial")
       .then((response) => response.json())
       .then((data) => setEspeciales(data));
 
