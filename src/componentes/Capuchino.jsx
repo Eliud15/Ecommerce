@@ -8,7 +8,7 @@ export const Capuchino = () => {
   const navegador = useNavigate();
     const [capuchino, setCapuchino] = useState([]);
     useEffect(() => {
-      fetch("https://cafeapi.onrender.com/capuchino")
+      fetch("https://cafeapi.onrender.com/capuchino", { mode: 'no-cors'})
       .then((response) => response.json())
       .then((data) => setCapuchino(data));
     }, []);

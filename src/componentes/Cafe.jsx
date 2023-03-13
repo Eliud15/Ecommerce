@@ -8,7 +8,7 @@ export const Cafe = () => {
     const navegador = useNavigate();
     const [cafes, setCafes] = useState([]);
     useEffect(() => {
-        fetch("https://cafeapi.onrender.com/cafe")
+        fetch("https://cafeapi.onrender.com/cafe", { mode: 'no-cors'})
       .then((response) => response.json())
       .then((data) => setCafes(data));
     }, []);
